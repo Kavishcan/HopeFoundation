@@ -27,7 +27,7 @@
     </header>
 
     <!-- Main Content -->
-    <main style="min-height: 100vh; background: linear-gradient(135deg, var(--bg-dark) 0%, rgba(37, 99, 235, 0.1) 100%); padding: 4rem 0;">
+    <main style="min-height: 100vh; background: linear-gradient(135deg, var(--bg-dark) 0%, rgba(37, 99, 235, 0.1) 100%); padding: 4rem 0; padding-top: 120px;">
       <div class="container">
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; min-height: 80vh;">
           
@@ -40,28 +40,28 @@
             
             <form id="scholarshipForm">
               <div class="form-group">
-                <label for="name" class="form-label">Your Name</label>
-                <input type="text" id="name" name="name" class="form-input" required />
+                <label for="name" class="form-label" style="color: var(--white); font-weight: 500;">Your Name</label>
+                <input type="text" id="name" name="name" class="form-input" style="background: var(--gray-700); border: 1px solid var(--gray-600); color: var(--white);" required />
               </div>
 
               <div class="form-group">
-                <label for="email" class="form-label">Email Address</label>
-                <input type="email" id="email" name="email" class="form-input" required />
+                <label for="email" class="form-label" style="color: var(--white); font-weight: 500;">Email Address</label>
+                <input type="email" id="email" name="email" class="form-input" style="background: var(--gray-700); border: 1px solid var(--gray-600); color: var(--white);" required />
               </div>
 
               <div class="form-group">
-                <label for="studentName" class="form-label">Student Name (if specific)</label>
-                <input type="text" id="studentName" name="studentName" class="form-input" placeholder="Leave blank for general scholarship fund" />
+                <label for="studentName" class="form-label" style="color: var(--white); font-weight: 500;">Student Name (if specific)</label>
+                <input type="text" id="studentName" name="studentName" class="form-input" placeholder="Leave blank for general scholarship fund" style="background: var(--gray-700); border: 1px solid var(--gray-600); color: var(--white);" />
               </div>
 
               <div class="form-group">
-                <label for="amount" class="form-label">Scholarship Amount (USD)</label>
-                <input type="number" id="amount" name="amount" class="form-input" min="1" required />
+                <label for="amount" class="form-label" style="color: var(--white); font-weight: 500;">Scholarship Amount (USD)</label>
+                <input type="number" id="amount" name="amount" class="form-input" min="1" required style="background: var(--gray-700); border: 1px solid var(--gray-600); color: var(--white);" />
               </div>
 
               <div class="form-group">
-                <label for="duration" class="form-label">Scholarship Duration</label>
-                <select id="duration" name="duration" class="form-select" required>
+                <label for="duration" class="form-label" style="color: var(--white); font-weight: 500;">Scholarship Duration</label>
+                <select id="duration" name="duration" class="form-select" required style="background: var(--gray-700); border: 1px solid var(--gray-600); color: var(--white);">
                   <option value="">Select Duration</option>
                   <option value="one-time">One-time payment</option>
                   <option value="semester">One semester</option>
@@ -71,8 +71,8 @@
               </div>
 
               <div class="form-group">
-                <label for="purpose" class="form-label">Purpose / Message</label>
-                <textarea id="purpose" name="purpose" class="form-textarea" rows="4" required placeholder="Tell us about the purpose of this scholarship and any specific message for the student..."></textarea>
+                <label for="purpose" class="form-label" style="color: var(--white); font-weight: 500;">Purpose / Message</label>
+                <textarea id="purpose" name="purpose" class="form-textarea" rows="4" required placeholder="Tell us about the purpose of this scholarship and any specific message for the student..." style="background: var(--gray-700); border: 1px solid var(--gray-600); color: var(--white);"></textarea>
               </div>
 
               <button type="submit" class="btn btn-primary" style="width: 100%;">Donate Scholarship</button>
@@ -105,7 +105,7 @@
 
             <div class="card" style="background: rgba(37, 99, 235, 0.1); border: 1px solid rgba(37, 99, 235, 0.3); margin-bottom: 2rem;">
               <h4 style="color: var(--secondary-blue); margin-bottom: 1rem;">📚 Scholarship Impact</h4>
-              <ul style="color: var(--gray-300); line-height: 1.8;">
+              <ul style="color: var(--gray-200); line-height: 1.8;">
                 <li>Tuition and school fees</li>
                 <li>Books and educational materials</li>
                 <li>Transportation to school</li>
@@ -117,13 +117,13 @@
 
             <div class="card" style="background: rgba(228, 58, 71, 0.1); border: 1px solid rgba(228, 58, 71, 0.3); margin-bottom: 2rem;">
               <h4 style="color: var(--primary-red); margin-bottom: 1rem;">🌟 Success Stories</h4>
-              <div style="color: var(--gray-300); line-height: 1.7;">
+              <div style="color: var(--gray-200); line-height: 1.7;">
                 <p style="margin-bottom: 1rem;">
-                  <strong>Maria, 18</strong><br>
+                  <strong style="color: var(--white);">Maria, 18</strong><br>
                   "Thanks to my scholarship, I'm now studying medicine and hope to become a doctor to help my community."
                 </p>
                 <p>
-                  <strong>Ahmed, 20</strong><br>
+                  <strong style="color: var(--white);">Ahmed, 20</strong><br>
                   "The scholarship gave me the opportunity to pursue engineering. I'm now working on sustainable energy solutions."
                 </p>
               </div>
@@ -133,7 +133,7 @@
               <img src="image/logo.jpg" alt="NGO Logo" style="width: 50px; height: 50px; border-radius: 50%;" />
               <div>
                 <div style="font-weight: 600; color: var(--white);">Hope Foundation</div>
-                <div style="font-size: 0.9rem;">Empowering students through education</div>
+                <div style="font-size: 0.9rem; color: var(--gray-300);">Empowering students through education</div>
               </div>
             </div>
           </div>
