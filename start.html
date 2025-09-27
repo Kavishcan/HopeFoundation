@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Start With A Little</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      body {
+        background: linear-gradient(120deg, #f7fafc 0%, #ffe5e7 100%);
+        font-family: "Segoe UI", Arial, sans-serif;
+        margin: 0;
+        min-height: 100vh;
+      }
+      .header {
+        background: #e43a47;
+        color: #fff;
+        padding: 24px 0 16px 0;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      }
+      .header img {
+        height: 56px;
+        vertical-align: middle;
+        margin-right: 16px;
+        border-radius: 8px;
+      }
+      .header-title {
+        font-size: 2.2em;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+      .start-container {
+        max-width: 700px;
+        margin: 40px auto 32px auto;
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 6px 32px rgba(228, 58, 71, 0.1);
+        padding: 48px 40px 40px 40px;
+        text-align: center;
+      }
+      .start-container h2 {
+        color: #e43a47;
+        font-size: 2em;
+        margin-bottom: 18px;
+      }
+      .start-container p {
+        font-size: 1.18em;
+        color: #444;
+        margin-bottom: 36px;
+      }
+      .donate-btn {
+        background: linear-gradient(90deg, #e43a47 60%, #ff7a85 100%);
+        color: #fff;
+        border: none;
+        padding: 18px 44px;
+        font-size: 1.15em;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: 500;
+        box-shadow: 0 2px 8px rgba(228, 58, 71, 0.1);
+        transition: background 0.2s, transform 0.2s;
+      }
+      .donate-btn:hover {
+        background: linear-gradient(90deg, #c72e39 60%, #e43a47 100%);
+        transform: scale(1.04);
+      }
+      .nice-image {
+        width: 100%;
+        max-width: 340px;
+        border-radius: 14px;
+        margin-bottom: 28px;
+        box-shadow: 0 2px 16px rgba(228, 58, 71, 0.09);
+      }
+      .quote {
+        font-size: 1.1em;
+        color: #e43a47;
+        margin-bottom: 32px;
+        font-style: italic;
+      }
+      .footer {
+        background: #e43a47;
+        color: #fff;
+        text-align: center;
+        padding: 18px 0 10px 0;
+        width: 100%;
+        font-size: 1em;
+        letter-spacing: 0.5px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        z-index: 10;
+      }
+      @media (max-width: 700px) {
+        .start-container {
+          padding: 24px 8px;
+        }
+        .header-title {
+          font-size: 1.3em;
+        }
+      }
+    </style>
+  </head>
+  <body style="min-height: 100vh; display: flex; flex-direction: column">
+    <div class="header">
+      <img src="image/logo.jpg" alt="NGO Logo" />
+      <span class="header-title">NGO - Start With A Little</span>
+    </div>
+    <div
+      style="
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <div class="start-container">
+        <img src="image/banner.jpeg" alt="Hope Banner" class="nice-image" />
+        <h2>Every Little Act Makes a Big Difference</h2>
+        <div class="quote">
+          “No act of kindness, no matter how small, is ever wasted.”
+        </div>
+        <p>
+          Thank you for choosing to start with a little! Your kindness can spark
+          hope and change lives. Even the smallest gesture can help provide
+          food, education, and care to those in need. Together, we can build a
+          brighter future—one step at a time.
+        </p>
+        <a href="donate.html"><button class="donate-btn">Donate Now</button></a>
+      </div>
+    </div>
+    <div class="footer">
+      &copy; 2025 NGO. All rights reserved. |
+      <a href="NGO.html" style="color: #fff; text-decoration: underline"
+        >Back to Home</a
+      >
+    </div>
+  </body>
+</html>

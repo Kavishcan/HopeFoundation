@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volunteer Signup</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      body {
+        background: #101010;
+        font-family: "Segoe UI", Arial, sans-serif;
+        margin: 0;
+        min-height: 100vh;
+        color: #fff;
+      }
+      .header {
+        background: transparent;
+        color: #fff;
+        padding: 32px 0 0 0;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-left: 60px;
+      }
+      .header img {
+        height: 48px;
+        vertical-align: middle;
+        margin-right: 12px;
+        border-radius: 8px;
+      }
+      .header-title {
+        font-size: 2em;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+      .main-content {
+        display: flex;
+        min-height: 80vh;
+      }
+      .volunteer-form-container {
+        flex: 1;
+        max-width: 420px;
+        background: #181818;
+        border-radius: 18px;
+        box-shadow: 0 6px 32px rgba(0, 0, 0, 0.18);
+        padding: 48px 36px 36px 36px;
+        margin: 48px 0 48px 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .volunteer-form-container h2 {
+        color: #fff;
+        font-size: 1.7em;
+        margin-bottom: 18px;
+        text-align: left;
+      }
+      .volunteer-form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: #fff;
+      }
+      .volunteer-form input,
+      .volunteer-form textarea,
+      .volunteer-form select {
+        width: 100%;
+        padding: 10px 12px;
+        margin-bottom: 18px;
+        border: 1px solid #333;
+        border-radius: 7px;
+        font-size: 1em;
+        background: #222;
+        color: #fff;
+      }
+      .volunteer-form input:focus,
+      .volunteer-form textarea:focus,
+      .volunteer-form select:focus {
+        outline: 2px solid #e43a47;
+      }
+      .volunteer-form button {
+        background: #e43a47;
+        color: #fff;
+        border: none;
+        padding: 14px 36px;
+        font-size: 1.1em;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 500;
+        box-shadow: 0 2px 8px rgba(228, 58, 71, 0.1);
+        transition: background 0.2s, transform 0.2s;
+        margin-top: 8px;
+      }
+      .volunteer-form button:hover {
+        background: #c72e39;
+        transform: scale(1.04);
+      }
+      .success-message {
+        color: #e43a47;
+        background: #222;
+        border-radius: 8px;
+        padding: 16px;
+        text-align: center;
+        margin-top: 18px;
+        font-weight: 500;
+        display: none;
+      }
+      .side-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 48px;
+        min-width: 320px;
+        color: #fff;
+      }
+      .side-info .quote {
+        font-size: 1.3em;
+        font-style: italic;
+        color: #fff;
+        margin-bottom: 32px;
+        margin-top: 0;
+        text-align: left;
+        max-width: 480px;
+      }
+      .side-info .author {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 12px;
+        font-size: 1em;
+        color: #aaa;
+      }
+      .side-info .author img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+      .footer {
+        background: #181818;
+        color: #fff;
+        text-align: center;
+        padding: 18px 0 10px 0;
+        width: 100%;
+        font-size: 1em;
+        letter-spacing: 0.5px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        z-index: 10;
+        border-top: 1px solid #222;
+      }
+    </style>
+  </head>
+  <body style="min-height: 100vh">
+    <div class="header">
+      <img src="image/logo.jpg" alt="NGO Logo" />
+      <span class="header-title">Volunteer Signup</span>
+    </div>
+    <div class="main-content">
+      <div class="volunteer-form-container">
+        <h2>Welcome back</h2>
+        <p style="color: #aaa; margin-bottom: 24px">
+          Sign in to your account to volunteer
+        </p>
+        <form class="volunteer-form" id="volunteerForm">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required />
+
+          <label for="interest">Area of Interest</label>
+          <select id="interest" name="interest" required>
+            <option value="">Select Area</option>
+            <option value="education">Education</option>
+            <option value="health">Health</option>
+            <option value="community">Community Service</option>
+            <option value="fundraising">Fundraising</option>
+          </select>
+
+          <label for="message">Why do you want to volunteer?</label>
+          <textarea id="message" name="message" rows="3" required></textarea>
+
+          <button type="submit">Sign Up</button>
+        </form>
+        <div class="success-message" id="successMessage">
+          Thank you for signing up as a volunteer!<br />
+          We will contact you soon.
+        </div>
+      </div>
+      <div class="side-info">
+        <p class="quote">
+          “Volunteers are the heart of our organization. By signing up, you help
+          us reach more people, create lasting change, and build a better
+          world.”
+        </p>
+        <div class="author">
+          <img src="image/logo.jpg" alt="NGO Author" />
+          <span>@ngo_supporter</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      &copy; 2025 NGO. All rights reserved. |
+      <a href="NGO.html" style="color: #fff; text-decoration: underline"
+        >Back to Home</a
+      >
+    </div>
+    <script>
+      document
+        .getElementById("volunteerForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          document.getElementById("volunteerForm").style.display = "none";
+          document.getElementById("successMessage").style.display = "block";
+        });
+    </script>
+  </body>
+</html>
