@@ -3,127 +3,146 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Life Easier Donation</title>
+    <title>Life Donation - Hope Foundation</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <style>
-      body {
-        background: #fff;
-        color: #222;
-        font-family: "Segoe UI", Arial, sans-serif;
-        margin: 0;
-      }
-      .main-content {
-        display: flex;
-        min-height: 100vh;
-        background: #f7fafc;
-      }
-      .info {
-        flex: 1;
-        padding: 64px 48px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-      .info h2 {
-        color: #e43a47;
-        font-size: 2em;
-        margin-bottom: 18px;
-      }
-      .info p {
-        color: #444;
-        font-size: 1.1em;
-        margin-bottom: 18px;
-      }
-      .stats {
-        margin-bottom: 24px;
-        background: #fff;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-        padding: 16px 24px;
-        color: #222;
-        font-size: 1.08em;
-      }
-      .stats span {
-        color: #e43a47;
-        font-weight: bold;
-      }
-      .action {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: #fff;
-        border-radius: 18px;
-        margin: 64px 48px;
-        padding: 48px;
-        box-shadow: 0 6px 32px rgba(0, 0, 0, 0.08);
-      }
-      .action h3 {
-        color: #e43a47;
-        margin-bottom: 18px;
-      }
-      .action p {
-        color: #444;
-        margin-bottom: 24px;
-      }
-      .action button {
-        background: #e43a47;
-        color: #fff;
-        border: none;
-        padding: 14px 36px;
-        font-size: 1.1em;
-        border-radius: 8px;
-        cursor: pointer;
-        font-weight: 500;
-        transition: background 0.2s, transform 0.2s;
-        box-shadow: 0 2px 8px rgba(228, 58, 71, 0.08);
-      }
-      .action button:hover {
-        background: #c72e39;
-        transform: scale(1.04);
-      }
-      .footer {
-        background: #fff;
-        color: #222;
-        text-align: center;
-        padding: 18px 0 10px 0;
-        width: 100%;
-        font-size: 1em;
-        letter-spacing: 0.5px;
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        z-index: 10;
-        border-top: 1px solid #eee;
-      }
-    </style>
+    <link rel="icon" type="image/jpeg" href="image/logo.jpg" />
   </head>
   <body>
-    <div class="main-content">
-      <div class="info">
-        <h2>Make Life Easier for Them</h2>
-        <p>
-          Your donation helps us provide food, shelter, and medical care to
-          those in need. We focus on improving living conditions and restoring
-          dignity to vulnerable families.
-        </p>
-        <div class="stats">
-          <div>Target: <span>$8901</span></div>
-          <div>Collected so far: <span>$3675</span></div>
+    <!-- Header -->
+    <header id="header">
+      <div class="container">
+        <div class="logo">
+          <img src="image/logo.jpg" alt="NGO Logo" />
+          <span class="logo-text">Hope Foundation</span>
         </div>
-        <p>
-          With your support, our NGO delivers essential supplies, builds safe
-          homes, and offers healthcare services. Together, we can make life
-          easier for those who need it most.
-        </p>
+        <nav>
+          <ul>
+            <li><a href="NGO.html">Home</a></li>
+            <li><a href="NGO.html#aboutSection">About</a></li>
+            <li><a href="NGO.html#programsSection">Programs</a></li>
+            <li><a href="donate.html">Donate</a></li>
+          </ul>
+        </nav>
       </div>
-      <div class="action">
-        <h3>Be the change</h3>
-        <p>Your contribution brings hope and comfort. Click below to donate.</p>
-        <a href="donate.html"><button>Donate Now</button></a>
+    </header>
+
+    <!-- Main Content -->
+    <main style="min-height: 100vh; background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(37, 99, 235, 0.05) 100%); padding: 4rem 0;">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; min-height: 80vh;">
+          
+          <!-- Information Section -->
+          <div>
+            <div style="margin-bottom: 2rem;">
+              <img src="image/gallery/2 gall.jpg" alt="Life Support Program" style="width: 100%; max-width: 400px; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); margin-bottom: 2rem;" />
+              
+              <h2 style="color: var(--primary-red); font-size: 2.5rem; margin-bottom: 1.5rem;">
+                Make Life Easier for Them
+              </h2>
+              
+              <p style="font-size: 1.125rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+                This program focuses on improving the quality of life for vulnerable individuals and families. We provide essential support services, healthcare access, and community resources to help people overcome daily challenges.
+              </p>
+              
+              <p style="font-size: 1.125rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem;">
+                Our comprehensive approach includes housing assistance, job training, healthcare support, and community development. Your donation helps us create sustainable solutions that empower individuals and strengthen communities.
+              </p>
+            </div>
+
+            <div class="card" style="background: linear-gradient(135deg, var(--secondary-green), var(--primary-red)); color: var(--white); margin-bottom: 2rem;">
+              <h4 style="margin-bottom: 1rem;">📊 Campaign Progress</h4>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div>
+                  <div style="font-size: 1.5rem; font-weight: 600;">$8,901</div>
+                  <div style="font-size: 0.9rem; opacity: 0.9;">Target Goal</div>
+                </div>
+                <div>
+                  <div style="font-size: 1.5rem; font-weight: 600;">$3,560</div>
+                  <div style="font-size: 0.9rem; opacity: 0.9;">Raised So Far</div>
+                </div>
+              </div>
+              <div style="margin-top: 1rem;">
+                <div style="background: rgba(255,255,255,0.2); height: 8px; border-radius: 4px; overflow: hidden;">
+                  <div style="background: var(--white); height: 100%; width: 40%; border-radius: 4px;"></div>
+                </div>
+                <div style="text-align: center; margin-top: 0.5rem; font-size: 0.9rem;">40% Complete</div>
+              </div>
+            </div>
+
+            <div class="card" style="background: var(--gray-50); border: 1px solid var(--gray-200);">
+              <h4 style="color: var(--text-primary); margin-bottom: 1rem;">🎯 How Your Donation Helps</h4>
+              <ul style="color: var(--text-secondary); line-height: 1.8;">
+                <li>Housing assistance and shelter</li>
+                <li>Healthcare and medical support</li>
+                <li>Job training and employment services</li>
+                <li>Food and nutrition programs</li>
+                <li>Community development initiatives</li>
+                <li>Mental health and counseling services</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Action Section -->
+          <div class="card" style="text-align: center;">
+            <h3 style="color: var(--text-primary); margin-bottom: 1rem;">Ready to Make a Difference?</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.125rem;">
+              Your donation will directly impact lives by providing essential support services and creating opportunities for individuals and families to thrive.
+            </p>
+            
+            <div style="margin-bottom: 2rem;">
+              <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1rem;">
+                <button class="btn btn-secondary" style="padding: 0.75rem;">$25</button>
+                <button class="btn btn-secondary" style="padding: 0.75rem;">$50</button>
+                <button class="btn btn-secondary" style="padding: 0.75rem;">$100</button>
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                <button class="btn btn-secondary" style="padding: 0.75rem;">$250</button>
+                <button class="btn btn-secondary" style="padding: 0.75rem;">$500</button>
+              </div>
+            </div>
+
+            <a href="donate.html" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">Donate Now</a>
+            
+            <p style="color: var(--text-light); font-size: 0.9rem;">
+              All donations are secure and tax-deductible. 100% of your contribution goes directly to life support programs.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="footer">&copy; 2025 NGO. All rights reserved.</div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-bottom" style="text-align: center; padding: 2rem 0;">
+          <p>&copy; 2025 Hope Foundation. All rights reserved. | 
+            <a href="NGO.html" style="color: var(--primary-red); text-decoration: none;">Back to Home</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Header scroll effect
+      const header = document.getElementById('header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+
+      // Quick donation amount selection
+      document.querySelectorAll('.btn-secondary').forEach(btn => {
+        btn.addEventListener('click', function() {
+          // Remove active class from all buttons
+          document.querySelectorAll('.btn-secondary').forEach(b => b.classList.remove('btn-primary'));
+          // Add active class to clicked button
+          this.classList.add('btn-primary');
+          this.classList.remove('btn-secondary');
+        });
+      });
+    </script>
   </body>
 </html>
