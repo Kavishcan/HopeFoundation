@@ -1,65 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adopt a Child</title>
-  <link rel="stylesheet" href="./css/style.css" />
-  <style>
-    body { background: #fff; color: #222; font-family: 'Segoe UI', Arial, sans-serif; margin: 0; }
-    .main-content { display: flex; min-height: 100vh; background: #f7fafc; }
-    .info { flex: 1; padding: 64px 48px; display: flex; flex-direction: column; justify-content: center; }
-    .info img { width: 100%; max-width: 320px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.09); margin-bottom: 24px; }
-    .info h2 { color: #e43a47; font-size: 2em; margin-bottom: 18px; }
-    .info p { color: #444; font-size: 1.1em; margin-bottom: 18px; }
-    .action { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; background: #fff; border-radius: 18px; margin: 64px 48px; padding: 48px; box-shadow: 0 6px 32px rgba(0,0,0,0.08); }
-    .action h3 { color: #e43a47; margin-bottom: 18px; }
-    .action p { color: #444; margin-bottom: 24px; }
-    .action form { width: 100%; max-width: 340px; display: flex; flex-direction: column; }
-    .action label { margin-bottom: 8px; font-weight: 500; color: #222; }
-    .action input, .action textarea { padding: 10px 12px; margin-bottom: 18px; border: 1px solid #ccc; border-radius: 7px; font-size: 1em; background: #f7fafc; color: #222; }
-    .action input:focus, .action textarea:focus { outline: 2px solid #e43a47; }
-    .action button { background: #e43a47; color: #fff; border: none; padding: 14px 36px; font-size: 1.1em; border-radius: 8px; cursor: pointer; font-weight: 500; transition: background 0.2s, transform 0.2s; box-shadow: 0 2px 8px rgba(228, 58, 71, 0.08); }
-    .action button:hover { background: #c72e39; transform: scale(1.04); }
-    .success-message { color: #e43a47; background: #f7fafc; border-radius: 8px; padding: 16px; text-align: center; margin-top: 18px; font-weight: 500; display: none; }
-    .footer { background: #fff; color: #222; text-align: center; padding: 18px 0 10px 0; width: 100%; font-size: 1em; letter-spacing: 0.5px; position: fixed; left: 0; bottom: 0; z-index: 10; border-top: 1px solid #eee; }
-  </style>
-</head>
-<body>
-  <div class="main-content">
-    <div class="info">
-      <img src="image/program/3.jpg" alt="Adopt a Child" />
-      <h2>Adopt a Child & Save Lives</h2>
-      <p>Adopting a child is a life-changing act of compassion. It means giving a child a loving home, a sense of belonging, and a future filled with hope and opportunity. Your decision can truly save a life, offering a child a new beginning, filled with warmth, education, care, and endless possibilities.</p>
-      <p>Our NGO guides you through the adoption process, ensuring every child finds a safe and nurturing environment. We provide support, resources, and follow-up to help families and children thrive together.</p>
-    </div>
-    <div class="action">
-      <h3>Adoption Interest Form</h3>
-      <p>Fill out the form below to express your interest in adopting a child. Our team will contact you with more information and next steps.</p>
-      <form id="adoptForm">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" required />
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required />
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" required />
-        <label for="message">Why do you want to adopt?</label>
-        <textarea id="message" name="message" rows="3" required></textarea>
-        <button type="submit">Submit</button>
-      </form>
-      <div class="success-message" id="successMessage">
-        Thank you for your interest in adoption!<br />
-        Our team will contact you soon with more details.
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adopt a Child</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      body {
+        background: #fff;
+        color: #222;
+        font-family: "Segoe UI", Arial, sans-serif;
+        margin: 0;
+      }
+      .main-content {
+        display: flex;
+        min-height: 100vh;
+        background: #f7fafc;
+      }
+      .info {
+        flex: 1;
+        padding: 64px 48px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .info img {
+        width: 100%;
+        max-width: 320px;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.09);
+        margin-bottom: 24px;
+      }
+      .info h2 {
+        color: #e43a47;
+        font-size: 2em;
+        margin-bottom: 18px;
+      }
+      .info p {
+        color: #444;
+        font-size: 1.1em;
+        margin-bottom: 18px;
+      }
+      .action {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        border-radius: 18px;
+        margin: 64px 48px;
+        padding: 48px;
+        box-shadow: 0 6px 32px rgba(0, 0, 0, 0.08);
+      }
+      .action h3 {
+        color: #e43a47;
+        margin-bottom: 18px;
+      }
+      .action p {
+        color: #444;
+        margin-bottom: 24px;
+      }
+      .action form {
+        width: 100%;
+        max-width: 340px;
+        display: flex;
+        flex-direction: column;
+      }
+      .action label {
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: #222;
+      }
+      .action input,
+      .action textarea {
+        padding: 10px 12px;
+        margin-bottom: 18px;
+        border: 1px solid #ccc;
+        border-radius: 7px;
+        font-size: 1em;
+        background: #f7fafc;
+        color: #222;
+      }
+      .action input:focus,
+      .action textarea:focus {
+        outline: 2px solid #e43a47;
+      }
+      .action button {
+        background: #e43a47;
+        color: #fff;
+        border: none;
+        padding: 14px 36px;
+        font-size: 1.1em;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: background 0.2s, transform 0.2s;
+        box-shadow: 0 2px 8px rgba(228, 58, 71, 0.08);
+      }
+      .action button:hover {
+        background: #c72e39;
+        transform: scale(1.04);
+      }
+      .success-message {
+        color: #e43a47;
+        background: #f7fafc;
+        border-radius: 8px;
+        padding: 16px;
+        text-align: center;
+        margin-top: 18px;
+        font-weight: 500;
+        display: none;
+      }
+      .footer {
+        background: #fff;
+        color: #222;
+        text-align: center;
+        padding: 18px 0 10px 0;
+        width: 100%;
+        font-size: 1em;
+        letter-spacing: 0.5px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        z-index: 10;
+        border-top: 1px solid #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-content">
+      <div class="info">
+        <img src="image/program/3.jpg" alt="Adopt a Child" />
+        <h2>Adopt a Child & Save Lives</h2>
+        <p>
+          Adopting a child is a life-changing act of compassion. It means giving
+          a child a loving home, a sense of belonging, and a future filled with
+          hope and opportunity. Your decision can truly save a life, offering a
+          child a new beginning, filled with warmth, education, care, and
+          endless possibilities.
+        </p>
+        <p>
+          Our NGO guides you through the adoption process, ensuring every child
+          finds a safe and nurturing environment. We provide support, resources,
+          and follow-up to help families and children thrive together.
+        </p>
+      </div>
+      <div class="action">
+        <h3>Adoption Interest Form</h3>
+        <p>
+          Fill out the form below to express your interest in adopting a child.
+          Our team will contact you with more information and next steps.
+        </p>
+        <form id="adoptForm">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required />
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required />
+          <label for="message">Why do you want to adopt?</label>
+          <textarea id="message" name="message" rows="3" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+        <div class="success-message" id="successMessage">
+          Thank you for your interest in adoption!<br />
+          Our team will contact you soon with more details.
+        </div>
       </div>
     </div>
-  </div>
-  <div class="footer">&copy; 2025 NGO. All rights reserved.</div>
-  <script>
-    document.getElementById('adoptForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      document.getElementById('adoptForm').style.display = 'none';
-      document.getElementById('successMessage').style.display = 'block';
-    });
-  </script>
-</body>
+    <div class="footer">&copy; 2025 NGO. All rights reserved.</div>
+    <script>
+      document
+        .getElementById("adoptForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          document.getElementById("adoptForm").style.display = "none";
+          document.getElementById("successMessage").style.display = "block";
+        });
+    </script>
+  </body>
 </html>
