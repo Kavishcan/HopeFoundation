@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Donate from './pages/Donate';
+import Volunteer from './pages/Volunteer';
 import AdminDashboard from './pages/AdminDashboard';
 import { AuthProvider, AuthContext } from './context/AuthContext';
 
@@ -36,6 +37,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/donate" element={<Donate />} />
+              <Route path="/volunteer" element={<Volunteer />} />
               <Route
                 path="/admin"
                 element={

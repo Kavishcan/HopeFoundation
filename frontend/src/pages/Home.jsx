@@ -55,7 +55,7 @@ const Home = () => {
                             icon="🤝"
                             title="Become a Volunteer"
                             description="Lend your time and talents to a cause that truly matters. Together, we can uplift communities and change lives. Join us today — become a volunteer and make a difference."
-                            link="/register"
+                            link="/volunteer"
                             linkText="Join Now"
                         />
                         <AboutCard
@@ -175,7 +175,7 @@ const Home = () => {
             <section id="joinSection" style={{
                 padding: '8rem 0',
                 textAlign: 'center',
-                backgroundImage: 'linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("/image/pattern.jpg")',
+                backgroundImage: 'linear-gradient(135deg, rgba(6, 8, 109, 0.97), rgba(172, 10, 91, 1)), url("/image/pattern.jpg")',
                 backgroundSize: 'cover',
                 backgroundAttachment: 'fixed'
             }}>

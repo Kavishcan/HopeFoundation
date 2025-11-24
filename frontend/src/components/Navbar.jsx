@@ -13,7 +13,16 @@ const Navbar = () => {
     };
 
     return (
-        <nav style={{ padding: '1.5rem 0', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
+        <nav style={{
+            position: 'sticky',
+            top: 0,
+            zIndex: 1000,
+            padding: '1.5rem 0',
+            borderBottom: '1px solid rgba(255,255,255,0.1)',
+            background: 'rgba(15, 23, 42, 0.8)',
+            backdropFilter: 'blur(10px)',
+            WebkitBackdropFilter: 'blur(10px)'
+        }}>
             <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <Link to="/" style={{ fontSize: '1.5rem', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                     <img src="/image/logo.jpg" alt="Logo" style={{ height: '40px', borderRadius: '50%' }} />
@@ -26,6 +35,7 @@ const Navbar = () => {
                     <a href="/#programsSection" style={{ color: 'var(--text-muted)' }}>Programs</a>
                     <a href="/#educationSection" style={{ color: 'var(--text-muted)' }}>Education</a>
                     <a href="/#gallerySection" style={{ color: 'var(--text-muted)' }}>Gallery</a>
+                    <Link to="/volunteer" style={{ color: 'var(--text-muted)' }}>Volunteer</Link>
                     <Link to="/donate" style={{ color: 'var(--text-muted)' }}>Donate</Link>
 
                     {user ? (
